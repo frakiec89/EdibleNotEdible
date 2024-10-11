@@ -73,15 +73,15 @@ void GoGame()
 // игра  за пк 
 void RaundPK()
 {
-    string objName = GetRandomObject();
-	Console.WriteLine("Играет компьютер");
+    string objName = GetRandomObject();   // получим предмет 
+	Console.WriteLine("Играет компьютер"); 
     Console.WriteLine($"{objName}: yes/no?");
 
-	bool otvetPK = GetRandomTrue_False();
+	bool otvetPK = GetRandomTrue_False(); // получим случайный ответ 
 
-	Console.WriteLine(GetStringTrueFalse(otvetPK));
+	Console.WriteLine(GetStringTrueFalse(otvetPK)); // выведем ответ на консоль 
 	
-	bool expected = IsEdibleObject(objName);
+	bool expected = IsEdibleObject(objName); // получим  правельный ответ 
 
     if (otvetPK == expected)
     {
@@ -98,13 +98,13 @@ void RaundPK()
 // игра  за  человека
 void RaundUser()
 {
-	string objName = GetRandomObject();
+	string objName = GetRandomObject(); // получим  предмет
 	Console.WriteLine("Играет человек");
 	Console.WriteLine($"{objName}: yes/no?");
 	
-	bool otvetUser = IsTrue_Folse(Console.ReadLine());
+	bool otvetUser = IsTrue_Folse(Console.ReadLine()); // получим ответ с консоли 
 	
-	bool expected = IsEdibleObject(objName);
+	bool expected = IsEdibleObject(objName);  // получим  правельный  ответ 
 
 	if (otvetUser == expected)
     {
